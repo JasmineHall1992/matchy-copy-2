@@ -24,9 +24,13 @@ console.log(animal);
 // Step 2 - Array Creation ///////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 var noises = [];
-noises['sound'] = "bark";
-noises.sound.push("yelp");
-
+noises[0] = "bark";
+noises.push("yelp");
+noises.unshift("woof");
+noises[noises.length] = "howl";
+console.log(noises.length);
+console.log(noises[noises.length - 1]);
+console.log(noises);
 
 
 //////////////////////////////////////////////////////////////////////
