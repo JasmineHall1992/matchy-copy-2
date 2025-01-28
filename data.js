@@ -66,20 +66,35 @@ console.log(animal);
 // Step 6 - A Collection of Animals //////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 var animals = [];
-animals.push("animal");
+animals.push(animal);
 console.log(animals);
 var duck = { species: 'duck', name: 'Jerome', noises: ['quack', 'honk', 'sneeze', 'woosh']};
-animals.push("duck");
+animals.push(duck);
 console.log(animals);
-
+var horse = { species: 'horse', name: 'Seabiscuit', noises: ['whiney', 'neigh']};
+animals.push(horse);
+var frog = { species: 'frog', name: 'Tiana', noises: ["ribbit", "gulp"]};
+animals.push(frog);
+console.log(animals.length);
 
 
 //////////////////////////////////////////////////////////////////////
 // Step 7 - Making Friends ///////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
+//An array would be the best method because it holds lists of objects
+var friends = [];
 
-
-
+function getRandom(array) {
+  return Math.floor(Math.random() * array.length);
+}
+//make a random index by using function on animals array
+let randomIndex = getRandom(animals);
+//get an array of keys
+const keys = Object.keys(animal);
+//get the name of the animal at the random index
+let randomAnimal = keys[randomIndex];
+//push the random name into the friends array
+friends.push(randomAnimal);
 /**
  * Nice work! You're done Part 1. Pat yourself on the back and
  * move onto Part 2 in the file called "functions.js"
