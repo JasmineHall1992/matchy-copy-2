@@ -89,12 +89,16 @@ function getRandom(array) {
 }
 //make a random index by using function on animals array
 let randomIndex = getRandom(animals);
-//get an array of keys
-const keys = Object.keys(animal);
 //get the name of the animal at the random index
-let randomAnimal = keys[randomIndex];
+let randomAnimal = animals[randomIndex].name;
 //push the random name into the friends array
 friends.push(randomAnimal);
+//console log
+console.log(friends);
+//add friends list as a property named friends on one of the animals in the animals array
+let newProperty = animals[1]['friends'] = friends;
+//console.log my work
+console.log(newProperty);
 /**
  * Nice work! You're done Part 1. Pat yourself on the back and
  * move onto Part 2 in the file called "functions.js"
