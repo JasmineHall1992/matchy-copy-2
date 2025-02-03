@@ -12,6 +12,18 @@
 //////////////////////////////////////////////////////////////////////
 // Step 1 - Search ///////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
+//I: takes in an array of animals, takes in a string representing the name of an animal(for a search)
+//O: returns the animals Object if an animal with that name exists
+//O: returns a null if no animal with that name exists
+//C: make case insensitive when dealing with a string
+function search(animals, name){
+    for (let i = 0; i < animals.length; i++){
+        if (animals[i].name.toLowerCase() === name.toLowerCase()){
+            return animals[i];
+        } 
+    }
+            return null;        
+    }
 
 
 
