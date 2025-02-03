@@ -9,6 +9,8 @@
  * and read every instruction carefully.
  */
 
+const { animal } = require("./data");
+
 //////////////////////////////////////////////////////////////////////
 // Step 1 - Search ///////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
@@ -30,7 +32,18 @@ function search(animals, name){
 //////////////////////////////////////////////////////////////////////
 // Step 2 - Replace //////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-
+//I: an array of animals, a string representing the name of an animal, an Object to replace animal
+//O: if the name exists within the araym replace the object with replacement object
+function replace(animals, name, replacement){
+    //loop through the array
+    for (let i = 0; i < animals.length; i++){
+        if (animals[i].name.toLowerCase() === name.toLowerCase() ){
+            //replace the animal object with the replacement object
+            animals[i] = replacement;
+            return;
+        }
+    }
+}
 
 
 //////////////////////////////////////////////////////////////////////
