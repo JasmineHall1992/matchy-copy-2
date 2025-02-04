@@ -21,7 +21,7 @@ const { animal } = require("./data");
 function search(animals, name) {
     // Loop through the array of animals
     for (let i = 0; i < animals.length; i++) {
-      // Check if the current animal's name matches the name we are searching for
+      // Check if the current animal's name matches the name we are searching for, make lowercase for case sensitivity
       if (animals[i].name.toLowerCase() === name.toLowerCase()) {
         return animals[i]; // Return the entire animal object
       }
@@ -76,7 +76,7 @@ function add(animals, newAnimal) {
     // Check if the new animal has a valid name and species
     if (!newAnimal.name || newAnimal.name.length === 0 || 
         !newAnimal.species || newAnimal.species.length === 0) {
-      return; // Do nothing if the validation fails
+      return; // Do nothing if the data validation fails
     }
   
     // Check if the name is unique
