@@ -22,7 +22,7 @@ function search(animals, name) {
     // Loop through the array of animals
     for (let i = 0; i < animals.length; i++) {
       // Check if the current animal's name matches the name we are searching for
-      if (animals[i].name === name) {
+      if (animals[i].name.toLowerCase() === name.toLowerCase()) {
         return animals[i]; // Return the entire animal object
       }
     }
@@ -107,4 +107,6 @@ if((typeof process !== 'undefined') &&
     module.exports.replace = replace || null;
     module.exports.remove = remove || null;
     module.exports.add = add || null;
+    module.exports = { search, replace, remove, add };
+
 }
