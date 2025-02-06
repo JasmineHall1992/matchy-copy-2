@@ -18,18 +18,26 @@ const { animal } = require("./data");
 //O: returns the animals Object if an animal with that name exists
 //O: returns a null if no animal with that name exists
 //C: make case insensitive when dealing with a string
-function search(animals, name) {
-    // Loop through the array of animals
-    for (let i = 0; i < animals.length; i++) {
-      // Check if the current animal's name matches the name we are searching for, make lowercase for case sensitivity
-      if (animals[i].name.toLowerCase() === name.toLowerCase()) {
-        return animals[i]; // Return the entire animal object
+//////////////////////////////////////////////////////////////////////
+// Step 1 - Search ///////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
+/*  1. Open up the file `functions.js` in your editor.
+ - Implement a function declaration called `search` that:
+ - Takes a paramater representing an Array of `animals`.
+ - Takes a paramater representing a String, the name of an animal on which to perform a search.
+ - Looks through the `animals` Array, and returns the animal's Object if an animal with that name exists.
+ - Returns `null` if no animal with that name exists
+3. Use the search bar at the top of the page to make sure your function works./*
+*/
+
+function search(animals, string){
+  for(let i = 0; i < animals.length; i++){
+      if (animals[i].name === string){//make sure to use dot notation to access animals name
+          return animals[i]
       }
-    }
-    // If no animal is found, return null
-    return null;
   }
-  
+  return null
+  }
 
 
 //////////////////////////////////////////////////////////////////////
@@ -37,17 +45,24 @@ function search(animals, name) {
 //////////////////////////////////////////////////////////////////////
 //I: an array of animals, a string representing the name of an animal, an Object to replace animal
 //O: if the name exists within the araym replace the object with replacement object
-function replace(animals, name, replacement) {
-    // Loop through the array of animals
-    for (let i = 0; i < animals.length; i++) {
-      // Check if the current animal's name matches the name we are searching for
-      if (animals[i].name === name) {
-        animals[i] = replacement; // Replace the entire animal object
-        return; // Exit the function after replacing
+/*//////////////////////////////////////////////////////////////////////
+// Step 2 - Replace //////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
+Write a function declaration called `replace` with a signature of `replace(animals, name, replacement) { //... } ` that:
+   - Takes 3 parameters, an Array of animals, a String representing  the name of an animal on which to perform a search, and an Object that represents the replacement animal.
+   - If an animal with that name exists within the `animals` Array, replace it's entire Object with the replacement Object.
+   - Otherwise do nothing.
+ 2. Preview the `index.html` page to test it on the website.
+*/
+
+function replace(animals, name, replacement){
+  for (let i = 0; i < animals.length; i++){
+      if(animals[i].name === name) {//again, needs dot notation to access the animal name
+          animals[i] = replacement
       }
-    }
-    // Do nothing if no match is found
   }
+
+}ß
 
   
 
